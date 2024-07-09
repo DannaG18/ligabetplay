@@ -86,6 +86,7 @@ public class Main {
                     coach.setLastName(JOptionPane.showInputDialog(null, "Enter the last name of the coach", "Suarez"));
                     coach.setAge(Integer.parseInt(JOptionPane.showInputDialog(null, "Enter the age of the coach", "50")));
                     team.setCoach(coach);
+                    System.out.println(team.getCoach().get(0).getName());
                 }while (JOptionPane.showConfirmDialog(null, "Do you want to register another coach?","Confirmation", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE) == 0);
                     break;
                 case 7:
@@ -188,6 +189,8 @@ public class Main {
         JScrollPane scrollPane = new JScrollPane(table);
         JPanel panel = new JPanel();
         panel.add(scrollPane);
+
+        JOptionPane.showMessageDialog(null, panel, "Coach List", JOptionPane.PLAIN_MESSAGE);
     }
 
     public static void showDoctorTable(Hashtable<Integer, Team> teams){
@@ -203,6 +206,8 @@ public class Main {
         JScrollPane scrollPane = new JScrollPane(table);
         JPanel panel = new JPanel();
         panel.add(scrollPane);
+
+        JOptionPane.showMessageDialog(null, panel, "Doctor List", JOptionPane.PLAIN_MESSAGE);
     }
 }
 
